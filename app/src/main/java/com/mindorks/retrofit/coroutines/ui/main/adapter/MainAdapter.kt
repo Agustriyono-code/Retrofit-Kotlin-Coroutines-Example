@@ -33,6 +33,7 @@ class MainAdapter(private val users: ArrayList<User>) : RecyclerView.Adapter<Dat
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder =
         DataViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false))
 
+    //mengambil item dengan menerapkan ukuran user.size
     override fun getItemCount(): Int = users.size
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {

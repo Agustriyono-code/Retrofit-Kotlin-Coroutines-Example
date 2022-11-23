@@ -60,9 +60,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     //TODO 9:Bagian untuk menampilkan gambar
+    //mengakses viewmodel dengam mengambil data dari user
+    //dam menampilkan gambar kelayar
     private fun setupObservers() {
         viewModel.getUsers().observe(this, Observer {
             it?.let { resource ->
+                //mengakses file resource.kt
                when (resource.status) {
                     SUCCESS -> {
                         recyclerView.visibility = View.VISIBLE
@@ -83,6 +86,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
+    //mengakses file adapter denga menggunkan list
     private fun retrieveList(users: List<User>) {
         adapter.apply {
             addUsers(users)
