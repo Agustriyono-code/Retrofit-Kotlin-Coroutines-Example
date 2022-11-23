@@ -6,7 +6,7 @@ import com.mindorks.retrofit.coroutines.data.repository.MainRepository
 import com.mindorks.retrofit.coroutines.utils.Resource
 import kotlinx.coroutines.Dispatchers
 
-
+//TODO 4 :view model
 class MainViewModel(private val mainRepository: MainRepository) : ViewModel() {
 
     fun getUsers() = liveData(Dispatchers.IO) {

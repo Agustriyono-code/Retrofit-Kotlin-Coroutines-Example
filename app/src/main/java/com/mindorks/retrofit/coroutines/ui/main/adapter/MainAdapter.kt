@@ -12,10 +12,12 @@ import kotlinx.android.synthetic.main.item_layout.view.imageViewAvatar
 import kotlinx.android.synthetic.main.item_layout.view.textViewUserEmail
 import kotlinx.android.synthetic.main.item_layout.view.textViewUserName
 
+//TODO 3:adapter
 class MainAdapter(private val users: ArrayList<User>) : RecyclerView.Adapter<DataViewHolder>() {
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+        //TODO 8:Bagian untuk load url gambar
         //mengambil data binding user
         fun bind(user: User) {
             itemView.apply {

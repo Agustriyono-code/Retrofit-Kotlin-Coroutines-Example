@@ -21,6 +21,8 @@ import com.mindorks.retrofit.coroutines.utils.Status.SUCCESS
 import kotlinx.android.synthetic.main.activity_main.progressBar
 import kotlinx.android.synthetic.main.activity_main.recyclerView
 
+//TODO 1: Class View Activity main
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var viewModel: MainViewModel
@@ -43,7 +45,8 @@ class MainActivity : AppCompatActivity() {
             ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
         ).get(MainViewModel::class.java)
     }
-    
+
+    //TODO 2:recycleview
     private fun setupUI() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = MainAdapter(arrayListOf())
@@ -56,6 +59,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 
+    //TODO 9:Bagian untuk menampilkan gambar
     private fun setupObservers() {
         viewModel.getUsers().observe(this, Observer {
             it?.let { resource ->
